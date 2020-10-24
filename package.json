@@ -6,7 +6,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "lint": "eslint ./src --ext .ts,.tsx --ignore-pattern *.test.* -c ./.eslintrc",
+    "lint": "eslint './src/*.{ts,tsx}' --ignore-pattern *.test.*",
+    "lint:fix": "eslint './src/*.{ts,tsx}' --ignore-pattern *.test.* --quiet --fix",
     "eject": "react-scripts eject"
   },
   "dependencies": {
