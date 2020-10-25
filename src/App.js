@@ -2,10 +2,6 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
-// let a = () => {
-//   let result = 1 + '151515'
-// }
-
 const App = () => {
   return (
     <div className="App">
