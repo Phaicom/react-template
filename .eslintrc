@@ -1,17 +1,17 @@
 {
-  "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "react-hooks", "prettier", "jsx-a11y"],
+  "plugins": ["react", "react-hooks", "prettier", "jsx-a11y"],
   "extends": [
-    "plugin:@typescript-eslint/recommended",
+    "eslint:recommended",
     "plugin:react/recommended",
     "plugin:prettier/recommended",
-    "prettier/@typescript-eslint",
     "plugin:jsx-a11y/recommended"
   ],
+  "globals": { "Atomics": "readonly", "SharedArrayBuffer": "readonly" },
+  "parser": "babel-eslint",
   "parserOptions": {
+    "ecmaFeatures": { "jsx": true },
     "ecmaVersion": 2018,
-    "sourceType": "module",
-    "project": "./tsconfig.json"
+    "sourceType": "module"
   },
   "env": {
     "node": true,
@@ -21,7 +21,6 @@
   },
   "rules": {
     "indent": "off",
-    "@typescript-eslint/indent": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/prop-types": "off"
@@ -31,5 +30,52 @@
       "pragma": "React",
       "version": "detect"
     }
-  }
+  },
+  "overrides": [
+    {
+      "files": ["**/*.ts", "**/*.tsx"],
+      "plugins": [
+        "react",
+        "@typescript-eslint",
+        "react-hooks",
+        "prettier",
+        "jsx-a11y"
+      ],
+      "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/recommended",
+        "plugin:prettier/recommended",
+        "prettier/@typescript-eslint",
+        "plugin:jsx-a11y/recommended"
+      ],
+      "globals": { "Atomics": "readonly", "SharedArrayBuffer": "readonly" },
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "ecmaFeatures": { "jsx": true },
+        "ecmaVersion": 2018,
+        "sourceType": "module",
+        "project": "./tsconfig.json"
+      },
+      "env": {
+        "node": true,
+        "commonjs": true,
+        "es6": true,
+        "jest": true
+      },
+      "rules": {
+        "indent": "off",
+        "@typescript-eslint/indent": "off",
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "react/prop-types": "off"
+      },
+      "settings": {
+        "react": {
+          "pragma": "React",
+          "version": "detect"
+        }
+      }
+    }
+  ]
 }

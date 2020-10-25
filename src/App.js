@@ -1,6 +1,6 @@
-import React from 'react'
-import logo from './logo.svg'
-import './App.css'
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 // let a = () => {
 //   let result = 1 + '151515'
@@ -24,7 +24,7 @@ const App = () => {
         </a>
       </header>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
