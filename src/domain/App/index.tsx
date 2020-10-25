@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../../assets/images/logo.svg";
-import "./index.css";
+import "./index.scss";
 
 const App = (): JSX.Element => {
   return (
