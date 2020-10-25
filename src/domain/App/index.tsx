@@ -1,8 +1,8 @@
 import React from "react";
-import logo from "./assets/logo.svg";
-import "./App.css";
+import logo from "../../assets/images/logo.svg";
+import "./index.css";
 
-const App = () => {
+const App = (): JSX.Element => {
   return (
     <div className="App">
       <header className="App-header">

@@ -6,8 +6,8 @@
     "start": "BROWSER=none react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "lint": "eslint './src/*.{js,ts,tsx}'",
-    "lint:fix": "eslint './src/*.{js,ts,tsx}' --quiet --fix",
+    "lint": "eslint './src/**/*.{js,ts,tsx}'",
+    "lint:fix": "eslint './src/**/*.{js,ts,tsx}' --quiet --fix",
     "eject": "react-scripts eject"
   },
   "dependencies": {
